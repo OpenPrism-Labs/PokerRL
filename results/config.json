@@ -1,0 +1,29 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "cfr_iterations": 5000,
+  "neural_updates": 10000,
+  "eval_every": 250,
+  "learning_rate": 0.01,
+  "python": "3.13.13",
+  "numpy": "2.5.2",
+  "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+  "equilibrium": {
+    "value": -0.05555555555555558,
+    "best_response_p0": -0.05555555555555555,
+    "best_response_p1": 0.055555555555555636,
+    "nash_conv": 8.326672684688674e-17,
+    "exploitability": 4.163336342344337e-17
+  },
+  "budget_definitions": {
+    "cfr": "One simultaneous regret update traverses six deals, 30 terminal leaves",
+    "neural_pg": "One simultaneous Adam ascent update uses 30 exact terminal returns",
+    "random": "Zero training; equal probability on each legal action"
+  },
+  "neural_architecture": "Two separate 7-input, 16-tanh, 2-softmax networks",
+  "average": "Uniform-in-time behavioral policies weighted by each player's own reach",
+  "evaluation": "Exact six-deal expectation; 64 consistent pure responses per player"
+}

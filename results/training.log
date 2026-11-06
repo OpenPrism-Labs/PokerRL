@@ -1,0 +1,9 @@
+random seed=0 budget=0 exploitability=0.458333 wall=0.00s
+cfr seed=0 budget=5000 exploitability=0.003302 wall=1.59s
+neural_pg seed=0 budget=10000 exploitability=0.161118 wall=2.63s
+random seed=1 budget=0 exploitability=0.458333 wall=0.00s
+cfr seed=1 budget=5000 exploitability=0.003302 wall=1.58s
+neural_pg seed=1 budget=10000 exploitability=0.137778 wall=2.63s
+random seed=2 budget=0 exploitability=0.458333 wall=0.00s
+cfr seed=2 budget=5000 exploitability=0.003302 wall=1.60s
+neural_pg seed=2 budget=10000 exploitability=0.091820 wall=2.61s

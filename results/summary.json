@@ -1,0 +1,223 @@
+{
+  "final": [
+    {
+      "algorithm": "random",
+      "seed": 0,
+      "iteration": 0,
+      "training_seconds": 0.0,
+      "wall_seconds": 0.0005042940028943121,
+      "value": 0.12499999999999997,
+      "exploitability": 0.4583333333333332,
+      "nash_conv": 0.9166666666666664,
+      "current_value": 0.12499999999999997,
+      "current_exploitability": 0.4583333333333332,
+      "value_vs_random_p0": 0.12499999999999997,
+      "value_vs_random_p1": -0.12499999999999997
+    },
+    {
+      "algorithm": "cfr",
+      "seed": 0,
+      "iteration": 5000,
+      "training_seconds": 1.5768459230457665,
+      "wall_seconds": 1.5877058030018816,
+      "value": -0.05550640050387454,
+      "exploitability": 0.003302448056612204,
+      "nash_conv": 0.006604896113224408,
+      "current_value": -0.10964703677403309,
+      "current_exploitability": 0.16666666666666669,
+      "value_vs_random_p0": 0.12683399414063984,
+      "value_vs_random_p1": 0.16751460574260502
+    },
+    {
+      "algorithm": "neural_pg",
+      "seed": 0,
+      "iteration": 10000,
+      "training_seconds": 2.606082416983554,
+      "wall_seconds": 2.6283498220000183,
+      "value": 0.1029116398114382,
+      "exploitability": 0.16111785925647396,
+      "nash_conv": 0.3222357185129479,
+      "current_value": 0.33333310019060086,
+      "current_exploitability": 0.25000002090713935,
+      "value_vs_random_p0": 0.11741297268492862,
+      "value_vs_random_p1": 0.27611617405795824
+    },
+    {
+      "algorithm": "random",
+      "seed": 1,
+      "iteration": 0,
+      "training_seconds": 0.0,
+      "wall_seconds": 0.00030134500411804765,
+      "value": 0.12499999999999997,
+      "exploitability": 0.4583333333333332,
+      "nash_conv": 0.9166666666666664,
+      "current_value": 0.12499999999999997,
+      "current_exploitability": 0.4583333333333332,
+      "value_vs_random_p0": 0.12499999999999997,
+      "value_vs_random_p1": -0.12499999999999997
+    },
+    {
+      "algorithm": "cfr",
+      "seed": 1,
+      "iteration": 5000,
+      "training_seconds": 1.5694414281097124,
+      "wall_seconds": 1.5804746610010625,
+      "value": -0.05550640050387454,
+      "exploitability": 0.003302448056612204,
+      "nash_conv": 0.006604896113224408,
+      "current_value": -0.10964703677403309,
+      "current_exploitability": 0.16666666666666669,
+      "value_vs_random_p0": 0.12683399414063984,
+      "value_vs_random_p1": 0.16751460574260502
+    },
+    {
+      "algorithm": "neural_pg",
+      "seed": 1,
+      "iteration": 10000,
+      "training_seconds": 2.6078315949707758,
+      "wall_seconds": 2.6309072069998365,
+      "value": 0.06448496977794904,
+      "exploitability": 0.13777798580754508,
+      "nash_conv": 0.27555597161509016,
+      "current_value": 0.3333332311307443,
+      "current_exploitability": 0.2500000040886848,
+      "value_vs_random_p0": 0.11328652024085455,
+      "value_vs_random_p1": 0.27419115063623656
+    },
+    {
+      "algorithm": "random",
+      "seed": 2,
+      "iteration": 0,
+      "training_seconds": 0.0,
+      "wall_seconds": 0.00029919100052211434,
+      "value": 0.12499999999999997,
+      "exploitability": 0.4583333333333332,
+      "nash_conv": 0.9166666666666664,
+      "current_value": 0.12499999999999997,
+      "current_exploitability": 0.4583333333333332,
+      "value_vs_random_p0": 0.12499999999999997,
+      "value_vs_random_p1": -0.12499999999999997
+    },
+    {
+      "algorithm": "cfr",
+      "seed": 2,
+      "iteration": 5000,
+      "training_seconds": 1.590240729819925,
+      "wall_seconds": 1.600892180998926,
+      "value": -0.05550640050387454,
+      "exploitability": 0.003302448056612204,
+      "nash_conv": 0.006604896113224408,
+      "current_value": -0.10964703677403309,
+      "current_exploitability": 0.16666666666666669,
+      "value_vs_random_p0": 0.12683399414063984,
+      "value_vs_random_p1": 0.16751460574260502
+    },
+    {
+      "algorithm": "neural_pg",
+      "seed": 2,
+      "iteration": 10000,
+      "training_seconds": 2.5883888523094356,
+      "wall_seconds": 2.6108807170021464,
+      "value": -0.032541855989551165,
+      "exploitability": 0.09181991502598244,
+      "nash_conv": 0.18363983005196488,
+      "current_value": -0.1666661491677072,
+      "current_exploitability": 0.166667420164427,
+      "value_vs_random_p0": 0.15577111752396586,
+      "value_vs_random_p1": 0.17786098987699508
+    }
+  ],
+  "aggregate": {
+    "random": {
+      "value": {
+        "mean": 0.12499999999999996,
+        "std": 1.6996749443881478e-17
+      },
+      "exploitability": {
+        "mean": 0.4583333333333332,
+        "std": 0.0
+      },
+      "current_exploitability": {
+        "mean": 0.4583333333333332,
+        "std": 0.0
+      },
+      "value_vs_random_p0": {
+        "mean": 0.12499999999999996,
+        "std": 1.6996749443881478e-17
+      },
+      "value_vs_random_p1": {
+        "mean": -0.12499999999999996,
+        "std": 1.6996749443881478e-17
+      },
+      "training_seconds": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "wall_seconds": {
+        "mean": 0.00036827666917815804,
+        "std": 0.00011779938979600678
+      }
+    },
+    "cfr": {
+      "value": {
+        "mean": -0.05550640050387454,
+        "std": 0.0
+      },
+      "exploitability": {
+        "mean": 0.003302448056612204,
+        "std": 0.0
+      },
+      "current_exploitability": {
+        "mean": 0.16666666666666666,
+        "std": 3.3993498887762956e-17
+      },
+      "value_vs_random_p0": {
+        "mean": 0.12683399414063984,
+        "std": 0.0
+      },
+      "value_vs_random_p1": {
+        "mean": 0.16751460574260502,
+        "std": 0.0
+      },
+      "training_seconds": {
+        "mean": 1.578842693658468,
+        "std": 0.01054244077848789
+      },
+      "wall_seconds": {
+        "mean": 1.5896908816672901,
+        "std": 0.010352496495854733
+      }
+    },
+    "neural_pg": {
+      "value": {
+        "mean": 0.04495158453327869,
+        "std": 0.06980742965841594
+      },
+      "exploitability": {
+        "mean": 0.13023858669666713,
+        "std": 0.035258802771193296
+      },
+      "current_exploitability": {
+        "mean": 0.22222248172008371,
+        "std": 0.048112094616007677
+      },
+      "value_vs_random_p0": {
+        "mean": 0.128823536816583,
+        "std": 0.023428315815034285
+      },
+      "value_vs_random_p1": {
+        "mean": 0.24272277152372992,
+        "std": 0.0561801964003783
+      },
+      "training_seconds": {
+        "mean": 2.600767621421255,
+        "std": 0.01075594484229762
+      },
+      "wall_seconds": {
+        "mean": 2.6233792486673337,
+        "std": 0.01089931304480202
+      }
+    }
+  },
+  "std_definition": "Sample standard deviation across seeds; zero for one seed"
+}

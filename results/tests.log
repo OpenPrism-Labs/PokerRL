@@ -1,0 +1,15 @@
+test_equilibrium_has_kuhn_value_and_zero_consistent_exploitability (test_evaluate.EvaluationTests.test_equilibrium_has_kuhn_value_and_zero_consistent_exploitability) ... ok
+test_random_profile_has_known_value_and_best_responses (test_evaluate.EvaluationTests.test_random_profile_has_known_value_and_best_responses) ... ok
+test_return_gradient_matches_probability_finite_differences (test_evaluate.EvaluationTests.test_return_gradient_matches_probability_finite_differences) ... ok
+test_boundary_rejects_invalid_deals_and_histories (test_game.GameTests.test_boundary_rejects_invalid_deals_and_histories) ... ok
+test_complete_tree_has_legal_actions_and_zero_sum_payouts (test_game.GameTests.test_complete_tree_has_legal_actions_and_zero_sum_payouts) ... ok
+test_observations_hide_opponent_private_card (test_game.GameTests.test_observations_hide_opponent_private_card) ... ok
+test_cfr_average_reduces_exploitability_toward_equilibrium (test_training.TrainingTests.test_cfr_average_reduces_exploitability_toward_equilibrium) ... ok
+test_first_player_ascends_reward_against_fixed_opponent (test_training.TrainingTests.test_first_player_ascends_reward_against_fixed_opponent) ... ok
+test_neural_backpropagation_matches_weight_finite_difference (test_training.TrainingTests.test_neural_backpropagation_matches_weight_finite_difference) ... ok
+test_real_weight_training_and_identical_checkpoint_continuation (test_training.TrainingTests.test_real_weight_training_and_identical_checkpoint_continuation) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.657s
+
+OK
