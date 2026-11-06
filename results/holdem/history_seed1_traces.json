@@ -1,0 +1,234 @@
+[
+  {
+    "button": 5,
+    "board": [
+      39,
+      4,
+      1,
+      31,
+      38
+    ],
+    "payoffs": [
+      -1,
+      -2,
+      0,
+      12,
+      0,
+      -9
+    ],
+    "actions": [
+      {
+        "seat": 2,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 3,
+        "street": 0,
+        "kind": "raise_to",
+        "paid": 4,
+        "raise_to": 4,
+        "faced_bet": true
+      },
+      {
+        "seat": 4,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 5,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 4,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 0,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 1,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 3,
+        "street": 1,
+        "kind": "check_call",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": false
+      },
+      {
+        "seat": 5,
+        "street": 1,
+        "kind": "check_call",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": false
+      },
+      {
+        "seat": 3,
+        "street": 2,
+        "kind": "check_call",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": false
+      },
+      {
+        "seat": 5,
+        "street": 2,
+        "kind": "check_call",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": false
+      },
+      {
+        "seat": 3,
+        "street": 3,
+        "kind": "raise_to",
+        "paid": 5,
+        "raise_to": 5,
+        "faced_bet": false
+      },
+      {
+        "seat": 5,
+        "street": 3,
+        "kind": "check_call",
+        "paid": 5,
+        "raise_to": null,
+        "faced_bet": true
+      }
+    ]
+  },
+  {
+    "button": 5,
+    "board": [
+      39,
+      4,
+      1,
+      31,
+      38
+    ],
+    "payoffs": [
+      -1,
+      -2,
+      0,
+      12,
+      0,
+      -9
+    ],
+    "actions": [
+      {
+        "seat": 2,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 3,
+        "street": 0,
+        "kind": "raise_to",
+        "paid": 4,
+        "raise_to": 4,
+        "faced_bet": true
+      },
+      {
+        "seat": 4,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 5,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 4,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 0,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 1,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 3,
+        "street": 1,
+        "kind": "check_call",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": false
+      },
+      {
+        "seat": 5,
+        "street": 1,
+        "kind": "check_call",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": false
+      },
+      {
+        "seat": 3,
+        "street": 2,
+        "kind": "check_call",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": false
+      },
+      {
+        "seat": 5,
+        "street": 2,
+        "kind": "check_call",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": false
+      },
+      {
+        "seat": 3,
+        "street": 3,
+        "kind": "raise_to",
+        "paid": 5,
+        "raise_to": 5,
+        "faced_bet": false
+      },
+      {
+        "seat": 5,
+        "street": 3,
+        "kind": "check_call",
+        "paid": 5,
+        "raise_to": null,
+        "faced_bet": true
+      }
+    ]
+  }
+]

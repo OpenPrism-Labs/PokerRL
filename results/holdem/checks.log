@@ -1,0 +1,580 @@
+test_equilibrium_has_kuhn_value_and_zero_consistent_exploitability (test_evaluate.EvaluationTests.test_equilibrium_has_kuhn_value_and_zero_consistent_exploitability) ... ok
+test_random_profile_has_known_value_and_best_responses (test_evaluate.EvaluationTests.test_random_profile_has_known_value_and_best_responses) ... ok
+test_return_gradient_matches_probability_finite_differences (test_evaluate.EvaluationTests.test_return_gradient_matches_probability_finite_differences) ... ok
+test_boundary_rejects_invalid_deals_and_histories (test_game.GameTests.test_boundary_rejects_invalid_deals_and_histories) ... ok
+test_complete_tree_has_legal_actions_and_zero_sum_payouts (test_game.GameTests.test_complete_tree_has_legal_actions_and_zero_sum_payouts) ... ok
+test_observations_hide_opponent_private_card (test_game.GameTests.test_observations_hide_opponent_private_card) ... ok
+test_arbitrary_integer_raise_and_illegal_action_leave_hand_unchanged (test_holdem.HoldemTests.test_arbitrary_integer_raise_and_illegal_action_leave_hand_unchanged) ... ok
+test_board_tie_awards_odd_chip_clockwise_from_button (test_holdem.HoldemTests.test_board_tie_awards_odd_chip_clockwise_from_button) ... ok
+test_boundary_rejects_bad_stack_button_blind_and_card_types (test_holdem.HoldemTests.test_boundary_rejects_bad_stack_button_blind_and_card_types) ... ok
+test_cumulative_short_allins_reopen_a_full_raise (test_holdem.HoldemTests.test_cumulative_short_allins_reopen_a_full_raise) ... ok
+test_folds_settle_blinds_and_rotation_preserves_external_seats (test_holdem.HoldemTests.test_folds_settle_blinds_and_rotation_preserves_external_seats) ... ok
+test_lifecycle_and_reset_overrides (test_holdem.HoldemTests.test_lifecycle_and_reset_overrides) ... ok
+test_privacy_hides_changed_opponent_cards_and_snapshots_are_immutable (test_holdem.HoldemTests.test_privacy_hides_changed_opponent_cards_and_snapshots_are_immutable) ... ok
+test_round_robin_dealing_actor_order_and_public_contributions (test_holdem.HoldemTests.test_round_robin_dealing_actor_order_and_public_contributions) ... ok
+test_seeded_trajectories_ignore_global_rng_and_deck_override (test_holdem.HoldemTests.test_seeded_trajectories_ignore_global_rng_and_deck_override) ... ok
+test_short_allin_does_not_reopen_prior_raiser (test_holdem.HoldemTests.test_short_allin_does_not_reopen_prior_raiser) ... ok
+test_sidepots_and_uncalled_excess_have_independent_winners (test_holdem.HoldemTests.test_sidepots_and_uncalled_excess_have_independent_winners) ... ok
+test_each_hero_plays_every_button_position_in_complete_sessions (test_holdem_experiment.HoldemExperimentTests.test_each_hero_plays_every_button_position_in_complete_sessions) ... ok
+test_identical_policies_have_zero_paired_session_difference (test_holdem_experiment.HoldemExperimentTests.test_identical_policies_have_zero_paired_session_difference) ... ok
+test_abstract_actions_clamp_deduplicate_and_mask (test_holdem_learning.LearningTests.test_abstract_actions_clamp_deduplicate_and_mask) ... ok
+test_all_policies_produce_legal_actions_through_real_hands (test_holdem_learning.LearningTests.test_all_policies_produce_legal_actions_through_real_hands) ... ok
+test_checkpoint_roundtrip_and_exact_trainer_continuation (test_holdem_learning.LearningTests.test_checkpoint_roundtrip_and_exact_trainer_continuation) ... ok
+test_encoder_uses_public_relative_state_and_switchable_history (test_holdem_learning.LearningTests.test_encoder_uses_public_relative_state_and_switchable_history) ... ok
+test_hidden_cards_do_not_change_public_policy_input (test_holdem_learning.LearningTests.test_hidden_cards_do_not_change_public_policy_input) ... ok
+test_history_uses_completed_hand_window_and_relative_seats (test_holdem_learning.LearningTests.test_history_uses_completed_hand_window_and_relative_seats) ... ok
+test_score_gradient_matches_directional_finite_difference (test_holdem_learning.LearningTests.test_score_gradient_matches_directional_finite_difference) ... ok
+test_training_freezes_hand_and_uses_prior_baseline (test_holdem_learning.LearningTests.test_training_freezes_hand_and_uses_prior_baseline) ... ok
+test_checkpoint_restores_rng_optimizer_and_historical_continuation (test_opponents.OpponentTests.test_checkpoint_restores_rng_optimizer_and_historical_continuation) ... ok
+test_conditional_gradients_match_reward_finite_differences_both_seats (test_opponents.OpponentTests.test_conditional_gradients_match_reward_finite_differences_both_seats) ... ok
+test_frozen_equilibrium_has_zero_seat_vulnerability (test_opponents.OpponentTests.test_frozen_equilibrium_has_zero_seat_vulnerability) ... ok
+test_history_uses_public_opponent_actions_and_decays_once_per_hand (test_opponents.OpponentTests.test_history_uses_public_opponent_actions_and_decays_once_per_hand) ... ok
+test_rewards_learn_more_bluffing_against_observed_folding (test_opponents.OpponentTests.test_rewards_learn_more_bluffing_against_observed_folding) ... ok
+test_same_visible_history_is_invariant_to_hidden_cards_and_style (test_opponents.OpponentTests.test_same_visible_history_is_invariant_to_hidden_cards_and_style) ... ok
+test_separately_trained_zero_history_is_context_invariant (test_opponents.OpponentTests.test_separately_trained_zero_history_is_context_invariant) ... ok
+test_shifting_evaluation_retains_history_and_reports_finite_metrics (test_opponents.OpponentTests.test_shifting_evaluation_retains_history_and_reports_finite_metrics) ... ok
+test_cfr_average_reduces_exploitability_toward_equilibrium (test_training.TrainingTests.test_cfr_average_reduces_exploitability_toward_equilibrium) ... ok
+test_first_player_ascends_reward_against_fixed_opponent (test_training.TrainingTests.test_first_player_ascends_reward_against_fixed_opponent) ... ok
+test_neural_backpropagation_matches_weight_finite_difference (test_training.TrainingTests.test_neural_backpropagation_matches_weight_finite_difference) ... ok
+test_real_weight_training_and_identical_checkpoint_continuation (test_training.TrainingTests.test_real_weight_training_and_identical_checkpoint_continuation) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 2.170s
+
+OK
+All checks passed!
+unformatted: File would be reformatted
+   --> pokerrl/conditioned.py:20:45
+    |
+19  |         self.inputs = np.column_stack((self.inputs, np.zeros((6, 8))))
+    -         self.parameters[0] = np.concatenate(
+    -             (self.parameters[0], rng.normal(0, 0.3, (8, 16)))
+    -         )
+20  +         self.parameters[0] = np.concatenate((self.parameters[0], rng.normal(0, 0.3, (8, 16))))
+21  |         self.first = [np.zeros_like(parameter) for parameter in self.parameters]
+--------------------------------------------------------------------------------
+36  |
+    -     def __init__(
+    -         self, seed: int, learning_rate: float = 0.003, use_history: bool = True
+    -     ) -> None:
+37  +     def __init__(self, seed: int, learning_rate: float = 0.003, use_history: bool = True) -> None:
+38  |         self.rng = np.random.default_rng(seed)
+--------------------------------------------------------------------------------
+99  |         np.savez_compressed(
+    -             path, allow_pickle=False, **arrays, version=np.array(1), seed=np.array(self.seed),
+    -             learning_rate=np.array(self.learning_rate), use_history=np.array(self.use_history),
+    -             episodes=np.array(self.episodes), decay=np.array(self.decay),
+100 +             path,
+101 +             allow_pickle=False,
+102 +             **arrays,
+103 +             version=np.array(1),
+104 +             seed=np.array(self.seed),
+105 +             learning_rate=np.array(self.learning_rate),
+106 +             use_history=np.array(self.use_history),
+107 +             episodes=np.array(self.episodes),
+108 +             decay=np.array(self.decay),
+109 |             steps=np.array([network.steps for network in self.networks]),
+--------------------------------------------------------------------------------
+124 |             model = cls(
+    -                 int(checkpoint["seed"]), float(checkpoint["learning_rate"]),
+125 +                 int(checkpoint["seed"]),
+126 +                 float(checkpoint["learning_rate"]),
+127 |                 bool(checkpoint["use_history"]),
+    |
+
+unformatted: File would be reformatted
+   --> pokerrl/holdem.py:96:14
+    |
+95  |     def __init__(
+    -         self, seed: int, *, stacks: tuple[int, ...] = (200,) * 6,
+    -         small_blind: int = 1, big_blind: int = 2, button: int = 5,
+96  +         self,
+97  +         seed: int,
+98  +         *,
+99  +         stacks: tuple[int, ...] = (200,) * 6,
+100 +         small_blind: int = 1,
+101 +         big_blind: int = 2,
+102 +         button: int = 5,
+103 |     ) -> None:
+--------------------------------------------------------------------------------
+108 |         if (
+    -             type(small_blind) is not int or type(big_blind) is not int
+109 +             type(small_blind) is not int
+110 +             or type(big_blind) is not int
+111 |             or not 0 < small_blind <= big_blind
+--------------------------------------------------------------------------------
+139 |     def reset(
+    -         self, *, button: int | None = None, stacks: tuple[int, ...] | None = None,
+140 +         self,
+141 +         *,
+142 +         button: int | None = None,
+143 +         stacks: tuple[int, ...] | None = None,
+144 |         deck: tuple[int, ...] | None = None,
+--------------------------------------------------------------------------------
+149 |         next_button = (
+    -             self._button if self._state is None else (self._button + 1) % 6
+    -         ) if button is None else button
+150 +             (self._button if self._state is None else (self._button + 1) % 6)
+151 +             if button is None
+152 +             else button
+153 +         )
+154 |         starting = self._defaults if stacks is None else stacks
+155 |         _check_button(next_button)
+156 |         _check_stacks(starting)
+157 |         if deck is not None and (
+    -             len(deck) != 52 or any(type(c) is not int for c in deck)
+    -             or set(deck) != set(range(52))
+158 +             len(deck) != 52 or any(type(c) is not int for c in deck) or set(deck) != set(range(52))
+159 |         ):
+--------------------------------------------------------------------------------
+173 |         self._state = NoLimitTexasHoldem.create_state(
+    -             _AUTOMATIONS, True, 0, (self._small_blind, self._big_blind),
+    -             self._big_blind, tuple(starting[i] for i in self._seats), 6,
+174 +             _AUTOMATIONS,
+175 +             True,
+176 +             0,
+177 +             (self._small_blind, self._big_blind),
+178 +             self._big_blind,
+179 +             tuple(starting[i] for i in self._seats),
+180 +             6,
+181 |         )
+--------------------------------------------------------------------------------
+211 |         return Observation(
+    -             seat, self._button, state.street_index, (holes[0], holes[1]),
+    -             tuple(self._board), tuple(state.stacks[i] for i in self._indices),
+212 +             seat,
+213 +             self._button,
+214 +             state.street_index,
+215 +             (holes[0], holes[1]),
+216 +             tuple(self._board),
+217 +             tuple(state.stacks[i] for i in self._indices),
+218 |             tuple(state.bets[i] for i in self._indices),
+219 |             tuple(-state.payoffs[i] for i in self._indices),
+220 |             tuple(state.statuses[i] for i in self._indices),
+221 |             tuple(state.statuses[i] and state.stacks[i] == 0 for i in self._indices),
+    -             state.total_pot_amount, self._big_blind,
+222 +             state.total_pot_amount,
+223 +             self._big_blind,
+224 |             LegalActions(
+    -                 state.can_fold(), state.can_check_or_call(),
+225 +                 state.can_fold(),
+226 +                 state.can_check_or_call(),
+227 |                 state.checking_or_calling_amount or 0,
+--------------------------------------------------------------------------------
+279 |         return HandResult(
+    -             self._button, tuple(self._board),
+    -             tuple(state.payoffs[i] for i in self._indices), tuple(self._actions),
+280 +             self._button,
+281 +             tuple(self._board),
+282 +             tuple(state.payoffs[i] for i in self._indices),
+283 +             tuple(self._actions),
+284 |         )
+    |
+
+unformatted: File would be reformatted
+   --> pokerrl/holdem_learning.py:83:14
+    |
+82  |         Action("check_call") if legal.can_check_call else None,
+    -         None, None, None, None,
+83  +         None,
+84  +         None,
+85  +         None,
+86  +         None,
+87  |     ]
+--------------------------------------------------------------------------------
+101 |
+    - def encode(
+    -     observation: Observation, history: OpponentHistory, *, use_history: bool
+    - ) -> Array:
+102 + def encode(observation: Observation, history: OpponentHistory, *, use_history: bool) -> Array:
+103 |     """Encode only the acting player's cards and the public information boundary."""
+--------------------------------------------------------------------------------
+114 |         start = 114 + 9 * relative
+    -         values[start:start + 3] = np.log1p(
+    -             np.array([
+    -                 observation.stacks[seat], observation.bets[seat],
+    -                 observation.contributions[seat],
+    -             ]) / observation.big_blind
+115 +         values[start : start + 3] = np.log1p(
+116 +             np.array(
+117 +                 [
+118 +                     observation.stacks[seat],
+119 +                     observation.bets[seat],
+120 +                     observation.contributions[seat],
+121 +                 ]
+122 +             )
+123 +             / observation.big_blind
+124 |         )
+    -         values[start + 3:start + 5] = observation.active[seat], observation.all_in[seat]
+125 +         values[start + 3 : start + 5] = observation.active[seat], observation.all_in[seat]
+126 |         values[start + 5 + latest[seat]] = 1
+127 |     legal = observation.legal
+128 |     values[168:172] = np.log1p(
+    -         np.array([
+    -             observation.pot, legal.call_amount,
+    -             legal.min_raise_to or 0, legal.max_raise_to or 0,
+    -         ]) / observation.big_blind
+129 +         np.array(
+130 +             [
+131 +                 observation.pot,
+132 +                 legal.call_amount,
+133 +                 legal.min_raise_to or 0,
+134 +                 legal.max_raise_to or 0,
+135 +             ]
+136 +         )
+137 +         / observation.big_blind
+138 |     )
+--------------------------------------------------------------------------------
+194 |         return [
+    -             np.outer(inputs, hidden_gradient), hidden_gradient,
+    -             np.outer(hidden, logits_gradient), logits_gradient,
+195 +             np.outer(inputs, hidden_gradient),
+196 +             hidden_gradient,
+197 +             np.outer(hidden, logits_gradient),
+198 +             logits_gradient,
+199 |         ]
+--------------------------------------------------------------------------------
+204 |             np.savez_compressed(
+    -                 stream, allow_pickle=False, kind=np.array("inference"),
+205 +                 stream,
+206 +                 allow_pickle=False,
+207 +                 kind=np.array("inference"),
+208 |                 hidden=np.array(self.hidden),
+--------------------------------------------------------------------------------
+273 |
+    -     def __init__(
+    -         self, seed: int, *, use_history: bool, learning_rate: float = 0.001
+    -     ) -> None:
+274 +     def __init__(self, seed: int, *, use_history: bool, learning_rate: float = 0.001) -> None:
+275 |         if not np.isfinite(learning_rate) or learning_rate <= 0:
+--------------------------------------------------------------------------------
+286 |     def train_hand(
+    -         self, env: HoldemEnv, opponents: tuple[Policy, ...], history: OpponentHistory,
+    -         *, hero: int,
+287 +         self,
+288 +         env: HoldemEnv,
+289 +         opponents: tuple[Policy, ...],
+290 +         history: OpponentHistory,
+291 +         *,
+292 +         hero: int,
+293 |     ) -> HandSample:
+--------------------------------------------------------------------------------
+333 |                 second += 0.001 * gradient**2
+    -                 parameter += self.learning_rate * (first / (1 - 0.9**self.steps)) / (
+    -                     np.sqrt(second / (1 - 0.999**self.steps)) + 1e-8
+334 +                 parameter += (
+335 +                     self.learning_rate
+336 +                     * (first / (1 - 0.9**self.steps))
+337 +                     / (np.sqrt(second / (1 - 0.999**self.steps)) + 1e-8)
+338 |                 )
+--------------------------------------------------------------------------------
+349 |                 ("parameter", self.policy.parameters),
+    -                 ("first", self.first), ("second", self.second),
+350 +                 ("first", self.first),
+351 +                 ("second", self.second),
+352 |             )
+--------------------------------------------------------------------------------
+356 |             np.savez_compressed(
+    -                 stream, allow_pickle=False, **arrays, kind=np.array("trainer"),
+357 +                 stream,
+358 +                 allow_pickle=False,
+359 +                 **arrays,
+360 +                 kind=np.array("trainer"),
+361 |                 hidden=np.array(self.policy.hidden),
+362 |                 use_history=np.array(self.policy.use_history),
+    -                 learning_rate=np.array(self.learning_rate), steps=np.array(self.steps),
+    -                 hands=np.array(self.hands), baseline=np.array(self.baseline),
+363 +                 learning_rate=np.array(self.learning_rate),
+364 +                 steps=np.array(self.steps),
+365 +                 hands=np.array(self.hands),
+366 +                 baseline=np.array(self.baseline),
+367 |                 rng=np.array(json.dumps(self.rng.bit_generator.state)),
+--------------------------------------------------------------------------------
+375 |             trainer = cls(
+    -                 0, use_history=bool(data["use_history"]),
+376 +                 0,
+377 +                 use_history=bool(data["use_history"]),
+378 |                 learning_rate=float(data["learning_rate"]),
+--------------------------------------------------------------------------------
+385 |                 ("parameter", trainer.policy.parameters),
+    -                 ("first", trainer.first), ("second", trainer.second),
+386 +                 ("first", trainer.first),
+387 +                 ("second", trainer.second),
+388 |             ):
+    |
+
+unformatted: File would be reformatted
+   --> pokerrl/opponent_experiment.py:58:35
+    |
+57  | def evaluate(
+    -     model: OpponentLearner | None, opponents: tuple[Opponent, ...], seed: int,
+    -     *, hands: int, scenario: str, algorithm: str,
+58  +     model: OpponentLearner | None,
+59  +     opponents: tuple[Opponent, ...],
+60  +     seed: int,
+61  +     *,
+62  +     hands: int,
+63  +     scenario: str,
+64  +     algorithm: str,
+65  | ) -> list[EvaluationRow]:
+--------------------------------------------------------------------------------
+79  |                 equilibrium_policy()[player * 6 : player * 6 + 6]
+    -                 if model is None else model.policy(player, history)
+80  +                 if model is None
+81  +                 else model.policy(player, history)
+82  |             )
+83  |             metrics = seat_metrics(policy, opponent.policy, player)
+    -             rows.append(EvaluationRow(
+    -                 algorithm, seed, scenario, player, hand, f"phase_{phase}", opponent.name,
+    -                 metrics.expected_return, metrics.worst_case_return, metrics.vulnerability,
+    -                 float(history.counts.sum()),
+    -             ))
+84  +             rows.append(
+85  +                 EvaluationRow(
+86  +                     algorithm,
+87  +                     seed,
+88  +                     scenario,
+89  +                     player,
+90  +                     hand,
+91  +                     f"phase_{phase}",
+92  +                     opponent.name,
+93  +                     metrics.expected_return,
+94  +                     metrics.worst_case_return,
+95  +                     metrics.vulnerability,
+96  +                     float(history.counts.sum()),
+97  +                 )
+98  +             )
+99  |             profile = opponent.policy.copy()
+--------------------------------------------------------------------------------
+128 |     configuration = {
+    -         "seeds": args.seeds, "episodes": args.episodes,
+    -         "hands_per_episode": args.hands_per_episode, "eval_hands": args.eval_hands,
+    -         "learning_rate": args.learning_rate, "python": platform.python_version(),
+    -         "numpy": np.__version__, "platform": platform.platform(),
+    -         "training_population_seed": 1729, "test_population_seed": 8675309,
+129 +         "seeds": args.seeds,
+130 +         "episodes": args.episodes,
+131 +         "hands_per_episode": args.hands_per_episode,
+132 +         "eval_hands": args.eval_hands,
+133 +         "learning_rate": args.learning_rate,
+134 +         "python": platform.python_version(),
+135 +         "numpy": np.__version__,
+136 +         "platform": platform.platform(),
+137 +         "training_population_seed": 1729,
+138 +         "test_population_seed": 8675309,
+139 |         "evaluation_rng": "SeedSequence([run_seed, player, 19001]); separate from training RNG",
+--------------------------------------------------------------------------------
+183 |             for scenario, opponents in scenarios:
+    -                 rows.extend(evaluate(
+    -                     model, opponents, seed, hands=args.eval_hands,
+    -                     scenario=scenario, algorithm=algorithm,
+    -                 ))
+    -             timings.append({
+    -                 "algorithm": algorithm, "seed": seed, "training_seconds": training_seconds,
+    -                 "wall_seconds": time.perf_counter() - start,
+    -             })
+184 +                 rows.extend(
+185 +                     evaluate(
+186 +                         model,
+187 +                         opponents,
+188 +                         seed,
+189 +                         hands=args.eval_hands,
+190 +                         scenario=scenario,
+191 +                         algorithm=algorithm,
+192 +                     )
+193 +                 )
+194 +             timings.append(
+195 +                 {
+196 +                     "algorithm": algorithm,
+197 +                     "seed": seed,
+198 +                     "training_seconds": training_seconds,
+199 +                     "wall_seconds": time.perf_counter() - start,
+200 +                 }
+201 +             )
+202 |             print(f"{algorithm} seed={seed} wall={time.perf_counter() - start:.2f}s", flush=True)
+--------------------------------------------------------------------------------
+210 |         selected = [
+    -             row for row in rows if (row.algorithm, row.scenario, row.player, row.phase)
+211 +             row
+212 +             for row in rows
+213 +             if (row.algorithm, row.scenario, row.player, row.phase)
+214 |             == (algorithm, scenario, player, phase)
+215 |         ]
+216 |         entry: dict[str, str | int | float] = {
+    -             "algorithm": algorithm, "scenario": scenario, "player": player, "phase": phase,
+217 +             "algorithm": algorithm,
+218 +             "scenario": scenario,
+219 +             "player": player,
+220 +             "phase": phase,
+221 |         }
+--------------------------------------------------------------------------------
+230 |     summary = {
+    -         "aggregate": aggregates, "timings": timings,
+231 +         "aggregate": aggregates,
+232 +         "timings": timings,
+233 |         "std_definition": "Sample standard deviation of per-seed hand means; zero for one seed",
+    |
+
+unformatted: File would be reformatted
+  --> pokerrl/opponents.py:69:38
+   |
+68 |                 # New parameterizations plus seat/history asymmetry not seen in training.
+   -                 aggressive = np.clip(
+   -                     aggressive + rng.uniform(-0.10, 0.10, size=12), 0.01, 0.99
+   -                 )
+69 +                 aggressive = np.clip(aggressive + rng.uniform(-0.10, 0.10, size=12), 0.01, 0.99)
+70 |             opponents.append(
+   |
+
+unformatted: File would be reformatted
+   --> tests/test_holdem.py:12:1
+    |
+11  |     """Arrange test cards in physical dealing order, with distinct unused burns."""
+12  +
+13  |     def ids(text: str) -> list[int]:
+--------------------------------------------------------------------------------
+109 |         deck = deck_for(
+    -             ("AcAd", "KcKd", "QcQd", "JcJd", "TcTd", "9c9d"), "2c3d7h8s4c",
+110 +             ("AcAd", "KcKd", "QcQd", "JcJd", "TcTd", "9c9d"),
+111 +             "2c3d7h8s4c",
+112 |         )
+--------------------------------------------------------------------------------
+127 |         env = HoldemEnv(1, stacks=(200, 200, 200, 15, 200, 200))
+    -         env.reset(deck=deck_for(
+    -             ("9c9d", "TcTd", "AcAd", "KcKd", "QcQd", "JcJd"), "2c3d7h8s4c",
+    -         ))
+128 +         env.reset(
+129 +             deck=deck_for(
+130 +                 ("9c9d", "TcTd", "AcAd", "KcKd", "QcQd", "JcJd"),
+131 +                 "2c3d7h8s4c",
+132 +             )
+133 +         )
+134 |         env.step(Action("raise_to", 10))
+--------------------------------------------------------------------------------
+163 |         env = HoldemEnv(2)
+    -         env.reset(deck=deck_for(
+    -             ("2c2d", "3c3d", "4c4d", "5c5d", "6c6d", "7c7d"), "TsJsQsKsAs",
+    -         ))
+164 +         env.reset(
+165 +             deck=deck_for(
+166 +                 ("2c2d", "3c3d", "4c4d", "5c5d", "6c6d", "7c7d"),
+167 +                 "TsJsQsKsAs",
+168 +             )
+169 +         )
+170 |         env.step(Action("raise_to", 5))
+    |
+
+unformatted: File would be reformatted
+   --> tests/test_holdem_learning.py:32:16
+    |
+31  |     return Observation(
+    -         seat=2, button=5, street=0, hole=(40, 49), board=(),
+    -         stacks=(199, 198, 200, 200, 200, 200), bets=(1, 2, 0, 0, 0, 0),
+    -         contributions=(1, 2, 0, 0, 0, 0), active=(True,) * 6, all_in=(False,) * 6,
+    -         pot=3, big_blind=2,
+    -         legal=LegalActions(True, True, 2, 4, 200), actions=(),
+32  +         seat=2,
+33  +         button=5,
+34  +         street=0,
+35  +         hole=(40, 49),
+36  +         board=(),
+37  +         stacks=(199, 198, 200, 200, 200, 200),
+38  +         bets=(1, 2, 0, 0, 0, 0),
+39  +         contributions=(1, 2, 0, 0, 0, 0),
+40  +         active=(True,) * 6,
+41  +         all_in=(False,) * 6,
+42  +         pot=3,
+43  +         big_blind=2,
+44  +         legal=LegalActions(True, True, 2, 4, 200),
+45  +         actions=(),
+46  |     )
+--------------------------------------------------------------------------------
+50  |     return HandResult(
+    -         button=5, board=(), payoffs=(0,) * 6,
+51  +         button=5,
+52  +         board=(),
+53  +         payoffs=(0,) * 6,
+54  |         actions=(
+--------------------------------------------------------------------------------
+82  |             abstract_actions(obs),
+    -             (Action("fold"), Action("check_call"), Action("raise_to", 4), None,
+    -              Action("raise_to", 7), Action("raise_to", 200)),
+83  +             (
+84  +                 Action("fold"),
+85  +                 Action("check_call"),
+86  +                 Action("raise_to", 4),
+87  +                 None,
+88  +                 Action("raise_to", 7),
+89  +                 Action("raise_to", 200),
+90  +             ),
+91  |         )
+--------------------------------------------------------------------------------
+166 |         policies: tuple[Policy, ...] = (
+    -             NeuralPolicy(2), NeuralPolicy(3, use_history=False), ScriptedPolicy("random"),
+    -             ScriptedPolicy("tight"), ScriptedPolicy("loose"), ScriptedPolicy("aggressive"),
+167 +             NeuralPolicy(2),
+168 +             NeuralPolicy(3, use_history=False),
+169 +             ScriptedPolicy("random"),
+170 +             ScriptedPolicy("tight"),
+171 +             ScriptedPolicy("loose"),
+172 +             ScriptedPolicy("aggressive"),
+173 |         )
+--------------------------------------------------------------------------------
+199 |             def act(
+    -                 self, observation: Observation, history: OpponentHistory,
+200 +                 self,
+201 +                 observation: Observation,
+202 +                 history: OpponentHistory,
+203 |                 rng: np.random.Generator,
+--------------------------------------------------------------------------------
+218 |         self.assertEqual(trainer.baseline, sample.payoff_bb)
+    -         self.assertTrue(any(
+    -             np.any(before != after)
+    -             for before, after in zip(initial, trainer.policy.parameters, strict=True)
+    -         ))
+219 +         self.assertTrue(
+220 +             any(
+221 +                 np.any(before != after)
+222 +                 for before, after in zip(initial, trainer.policy.parameters, strict=True)
+223 +             )
+224 +         )
+225 |         self.assertEqual(history.features(1)[1, 0], 2 / 32)
+    |
+
+unformatted: File would be reformatted
+   --> tests/test_opponents.py:85:28
+    |
+84  |             learner.update(call_policy, 0, calling)
+85  +         self.assertGreater(learner.policy(0, folding)[0, 1] - learner.policy(0, calling)[0, 1], 0.5)
+86  |         self.assertGreater(
+    -             learner.policy(0, folding)[0, 1] - learner.policy(0, calling)[0, 1], 0.5
+    -         )
+    -         self.assertGreater(
+87  |             seat_metrics(learner.policy(0, folding), fold_policy, 0).expected_return,
+--------------------------------------------------------------------------------
+136 |         rows = evaluate(
+    -             OpponentLearner(5), (opponents[0], opponents[4]), 100,
+    -             hands=4, scenario="shifting", algorithm="history",
+137 +             OpponentLearner(5),
+138 +             (opponents[0], opponents[4]),
+139 +             100,
+140 +             hands=4,
+141 +             scenario="shifting",
+142 +             algorithm="history",
+143 |         )
+--------------------------------------------------------------------------------
+147 |             self.assertEqual(boundary.opponent, opponents[4].name)
+    -         self.assertTrue(all(
+    -             np.isfinite([row.expected_return, row.worst_case_return, row.vulnerability]).all()
+    -             for row in rows
+    -         ))
+148 +         self.assertTrue(
+149 +             all(
+150 +                 np.isfinite([row.expected_return, row.worst_case_return, row.vulnerability]).all()
+151 +                 for row in rows
+152 +             )
+153 +         )
+154 |
+    |
+
+8 files would be reformatted, 12 files already formatted

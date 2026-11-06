@@ -75,3 +75,18 @@ credible “current champion” declaration.
 
 No Modal job was required for the initial CPU-sized benchmark. No claim here
 is a reproduction of published large-scale poker performance.
+
+## Implemented Hold'em extension
+
+The repository now also provides a PokerKit-backed six-player no-limit Hold'em
+environment, with a 209-32-6 NumPy policy trained by sampled terminal-return
+REINFORCE. Public opponent-history features and a separately trained no-history
+baseline operationalize the opponent-modeling idea in a small experiment.
+The environment supports arbitrary legal integer raises; learned policies use
+six discrete choices. This is neither Deep CFR nor a reproduction of Pluribus.
+
+The committed 1,000-hand-per-model run does not demonstrate a statistically
+resolved advantage for history conditioning. Its tight scripted baseline has
+higher mean returns. Evaluation uses sampled BB/hand against scripted opponents,
+not exact exploitability or measured human strength. Full rules are implemented;
+strong full-game strategic play remains unestablished.

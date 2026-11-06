@@ -1,8 +1,132 @@
-# PokerRL: a small, runnable imperfect-information experiment
+# PokerRL: six-player Hold'em and exact Kuhn benchmarks
+
+## Six-player no-limit Texas Hold'em
+
+The full-game environment is `pokerrl.holdem.HoldemEnv`, backed by PokerKit
+0.7.7. It supports a 52-card deck, two private cards per player, flop/turn/river,
+rotating button and blinds, arbitrary legal integer raise-to amounts, short
+all-ins and reopening rules, multiple side pots, split pots, and odd-chip
+settlement. Observations expose only the current player's private cards.
+
+The experiment uses six-player cash hands with 100 big blinds per seat,
+1/2-chip blinds, zero ante/rake and a single runout. Stacks are rebought after
+each hand; this is not an elimination tournament. PokerKit's default tournament
+rules mode supplies deterministic settlement; no multi-runout cash-game options
+are enabled. The environment accepts unequal starting stacks. Local seeded
+decks make experiments reproducible without sharing RNG state with policies.
+
+```sh
+uv sync --extra dev
+uv run python -m unittest discover -s tests -v
+uv run python -m pokerrl.holdem_experiment --seeds 0 1 2 --output results/holdem
+```
+
+Defaults train each of two small networks for 1,000 hands per seed and evaluate
+six independent 120-hand sessions for each of two scenarios. A short run:
+
+```sh
+uv run python -m pokerrl.holdem_experiment --seeds 0 --train-hands 40 \
+  --eval-sessions 2 --eval-hands 12 --switch-hand 6 --output smoke-results/holdem
+```
+
+### Opponent-aware learning
+
+The NumPy policy has 209 inputs, 32 tanh hidden units, and six masked actions:
+fold, check/call, minimum raise, half-pot raise, pot raise, and all-in. Duplicate
+or illegal choices are masked. **The neural action abstraction is finite; the
+environment's no-limit raise API is not restricted to those sizes.**
+
+Inputs contain the player's cards, board, public stacks/bets/actions, position,
+and opponent statistics from the previous 32 completed hands: VPIP, preflop
+raising, aggression, calls and folds when facing bets, and observation support.
+Neither opponent labels nor hidden cards enter the policy. The comparison
+network has the same architecture and training budget with history inputs zero.
+
+Training uses terminal-return REINFORCE with a prior running reward baseline
+and Adam. Weights stay fixed within a hand. The training pool includes random,
+tight, loose, aggressive, and frozen historical neural policies. Opponents are
+not trained from human hand histories. Scripted opponents use simple hole-rank
+heuristics and are deliberately weak, especially postflop.
+
+Evaluation loads saved policies with frozen weights. Deck seeds, opponent
+parameters and action RNGs are separate from training. The fixed scenario uses
+held-out script parameters. In the shifting scenario all five opponents become
+more aggressive after hand 60, without notifying the learner or resetting its
+history. The hero changes seats every six hands while the button moves every
+hand, so it experiences every relative position.
+
+Results are sampled **big blinds per hand**, with bootstrap intervals over
+independent session means, conditional on these fitted models. Paired differences
+use the same session/deck seeds. The intervals do not capture uncertainty over
+all possible trained models, and full six-player exploitability is not computed.
+This small run is an implementation baseline, not a claim of strong poker play.
+
+### Using the environment and saved model
+
+```python
+from pathlib import Path
+import numpy as np
+from pokerrl.holdem import HoldemEnv
+from pokerrl.holdem_learning import NeuralPolicy, OpponentHistory
+
+env = HoldemEnv(seed=42)
+history = OpponentHistory()
+policy = NeuralPolicy.load(Path("results/holdem/history_seed0_checkpoint.npz"))
+rng = np.random.default_rng(42)
+env.reset()
+while not env.terminal:
+    observation = env.observation()
+    env.step(policy.act(observation, history, rng))
+result = env.result()
+history.update(result)
+print(result.payoffs)  # Six net chip rewards, summing to zero.
+```
+
+The example uses one policy at every seat. `Action("raise_to", amount)` can be
+passed directly to `env.step` for other legal integer sizing. `reset(deck=...)`
+accepts a complete permutation of card IDs for deterministic scenarios.
+`NeuralPolicy.save/load` stores inference weights; `Trainer.save/load` additionally
+stores Adam, running baseline and RNG. Resuming a complete session also requires
+caller-owned environment and history state.
+
+`results/holdem/` holds config, per-hand evaluation CSV, summary with intervals,
+checkpoints, historical snapshots, public hand traces and check/training logs.
+The separate `pokerrl.opponent_experiment` preserves the smaller Kuhn adaptation
+prototype; its full benchmark was superseded by this Hold'em implementation.
+
+### Measured Hold'em run
+
+Three seeds, 1,000 training hands per network, 6,000 total training hands and
+12,960 evaluation hands completed on CPU. Each scenario/method contains 18
+sessions of 120 hands. Returns below are BB/hand; higher is better.
+
+| Policy | Fixed opponents | Shifting opponents |
+|---|---:|---:|
+| History-aware neural | 0.984 [-2.682, 4.783] | -0.788 [-3.997, 3.267] |
+| No-history neural | -1.111 [-4.568, 2.125] | -1.326 [-5.944, 2.580] |
+| Tight scripted baseline | 2.468 [-0.435, 5.318] | 3.960 [0.882, 7.188] |
+
+Brackets show 95% session-bootstrap intervals. The paired history-minus-no-history
+difference is 2.095 [-2.937, 7.564] against fixed opponents and
+0.538 [-4.682, 6.407] across shifting sessions. **Neither difference establishes
+an adaptation advantage.** The tight baseline has higher mean returns than both
+networks in this run. Full results, including pre/post-switch breakdowns, are in
+`results/holdem/summary.json`; do not interpret this small run as convergence.
+
+Measured training throughput was 113-207 hands/second; each 1,000-hand network
+run took 4.8-8.8 seconds excluding evaluation. The rules simulation is CPU work
+and the network is tiny, so no Modal GPU was launched.
+
+All 39 tests pass, including the original Kuhn tests. Ruff check/format and
+strict Basedpyright pass (`results/holdem/checks-final.log`). A separate public-API
+hand traversed all four betting streets and settled a five-card board with
+payoffs `(-2, -2, 4, -2, -2, 4)`; see `results/holdem/manual-hand.log`.
+
+## Original Kuhn benchmark
 
 This CPU experiment compares uniform random play, tabular CFR, and a small neural
-self-play policy-gradient learner in heads-up Kuhn poker. NumPy is the only
-runtime dependency. No GPU, downloaded data, poker service, or pretrained model
+self-play policy-gradient learner in heads-up Kuhn poker. Its algorithms use only
+NumPy. No GPU, downloaded data, poker service, or pretrained model
 is used.
 
 ```sh

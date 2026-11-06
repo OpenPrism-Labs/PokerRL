@@ -1,0 +1,170 @@
+[
+  {
+    "button": 5,
+    "board": [
+      21,
+      5,
+      13,
+      46,
+      40
+    ],
+    "payoffs": [
+      602,
+      -2,
+      0,
+      -200,
+      -200,
+      -200
+    ],
+    "actions": [
+      {
+        "seat": 2,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 3,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 2,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 4,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 2,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 5,
+        "street": 0,
+        "kind": "raise_to",
+        "paid": 200,
+        "raise_to": 200,
+        "faced_bet": true
+      },
+      {
+        "seat": 0,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 199,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 1,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 3,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 198,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 4,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 198,
+        "raise_to": null,
+        "faced_bet": true
+      }
+    ]
+  },
+  {
+    "button": 5,
+    "board": [
+      21,
+      5,
+      13,
+      46,
+      40
+    ],
+    "payoffs": [
+      602,
+      -2,
+      0,
+      -200,
+      -200,
+      -200
+    ],
+    "actions": [
+      {
+        "seat": 2,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 3,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 2,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 4,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 2,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 5,
+        "street": 0,
+        "kind": "raise_to",
+        "paid": 200,
+        "raise_to": 200,
+        "faced_bet": true
+      },
+      {
+        "seat": 0,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 199,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 1,
+        "street": 0,
+        "kind": "fold",
+        "paid": 0,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 3,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 198,
+        "raise_to": null,
+        "faced_bet": true
+      },
+      {
+        "seat": 4,
+        "street": 0,
+        "kind": "check_call",
+        "paid": 198,
+        "raise_to": null,
+        "faced_bet": true
+      }
+    ]
+  }
+]

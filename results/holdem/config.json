@@ -1,0 +1,43 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "train_hands": 1000,
+  "eval_sessions": 6,
+  "eval_hands": 120,
+  "switch_hand": 60,
+  "learning_rate": 0.001,
+  "python": "3.13.13",
+  "numpy": "2.5.4",
+  "pokerkit": "0.7.7",
+  "players": 6,
+  "stacks": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "blinds": [
+    1,
+    2
+  ],
+  "format": "No-limit cash hands, rebuy every hand, one runout, no rake",
+  "action_space": "Env: arbitrary legal integer raise-to; learner: six slots",
+  "architecture": "209 inputs, 32 tanh, six masked action probabilities",
+  "training": "Terminal BB-return REINFORCE; prior running baseline; Adam",
+  "opponents": "Scripted populations plus frozen learner snapshots on 25% of training tables",
+  "training_schedule": "Reset table/history every 32; rotate hero every 6, button every hand",
+  "evaluation": "Separate deck/action/population RNGs, frozen weights, held-out parameters",
+  "shift": "All opponents turn aggressive mid-session; no history reset or notification",
+  "ci": "2000 bootstrap draws of session means, conditional on fitted models",
+  "limitations": [
+    "Intervals do not capture population uncertainty over all possible trained models",
+    "No exact exploitability, equilibrium, or competitive-strength guarantee",
+    "Small training budget; scripted opponents are not representative human data",
+    "Checkpoints restore policies; not complete environment/session RNG continuation"
+  ]
+}
